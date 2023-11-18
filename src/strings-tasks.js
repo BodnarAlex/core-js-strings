@@ -335,7 +335,8 @@ function countVowels(str) {
 function isPalindrome(str) {
   const stroke = str.replace(/[!?, ]/g, '').toLowerCase();
   let res = true;
-  for (let i = 0; i < stroke.length; i += 1) {
+  const half = Math.floor(stroke.length / 2);
+  for (let i = 0; i < half; i += 1) {
     if (stroke[i] !== stroke[stroke.length - i - 1]) {
       res = false;
     }
